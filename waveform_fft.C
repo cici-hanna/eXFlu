@@ -43,7 +43,7 @@ using std::vector;
 
 void waveform_fft(){
 
-  TFile *myFile = TFile::Open("Run2_EXFLU1_Compensated_W12_pad1.3_2.5E15neq_-25C/stats_Sr_Run2_300V_trig2750V.root");
+  TFile *myFile = TFile::Open("Run3_EXFLU1_Compensated_W13_pad1.3_2.5E15neq_-30C/stats_Sr_Run3_250V_trig2750V.root");
   TTree *tree = dynamic_cast<TTree*>(myFile->Get("Analysis"));
   TTreeReader myReader("Analysis", myFile);
   TTreeReaderValue<std::vector<std::vector<double>>> myw(myReader, "w");
@@ -88,7 +88,7 @@ void waveform_fft(){
 
   TCanvas *c1 = new TCanvas("c1","Waveform");
   TH1D *hwave = new TH1D("hwave", "hwave", n, start, end);
-  hwave->SetTitle("W13 Fluence 2.5E15, Bias 250V: Waveforms;time [s];amplitude [mV]");
+  hwave->SetTitle("Waveforms;time [s];amplitude [mV]");
   hwave->SetStats(0);
   hwave->SetFillColor(kBlue);
   hwave->SetLineColor(kBlue);
