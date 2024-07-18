@@ -114,7 +114,7 @@ void waveform_fft_4(){
 
   for(int i = 0; i < n; i++)
   {
-    hfftm_rebin1->SetBinContent(i, hfftm1->GetBinContent(i));
+    hfftm_rebin1->SetBinContent(i, hfftm1->GetBinContent(i)/sqrt(n));
   }
 
   hfftm_rebin1->SetTitle("Magnitude of Fast Fourier Transform;frequency [Hz]");
@@ -206,7 +206,8 @@ void waveform_fft_4(){
 
   for(int i = 0; i < n; i++)
   {
-    hfftm_rebin2->SetBinContent(i, hfftm2->GetBinContent(i));
+    hfftm_rebin2->SetBinContent(i, hfftm2->GetBinContent(i)/sqrt(n));
+    
   }
 
   hfftm_rebin2->SetTitle("Magnitude of Fast Fourier Transform;frequency [Hz]");
@@ -301,7 +302,7 @@ void waveform_fft_4(){
 
   for(int i = 0; i < n; i++)
   {
-    hfftm_rebin3->SetBinContent(i, hfftm3->GetBinContent(i));
+    hfftm_rebin3->SetBinContent(i, hfftm3->GetBinContent(i)/sqrt(n));
   }
 
   hfftm_rebin3->SetTitle("Magnitude of Fast Fourier Transform;frequency [Hz]");
@@ -393,7 +394,7 @@ void waveform_fft_4(){
 
   for(int i = 0; i < n; i++)
   {
-    hfftm_rebin4->SetBinContent(i, hfftm4->GetBinContent(i));
+    hfftm_rebin4->SetBinContent(i, hfftm4->GetBinContent(i)/sqrt(n));
   }
 
   hfftm_rebin4->SetTitle("Magnitude of Fast Fourier Transform;frequency [Hz]");

@@ -121,7 +121,7 @@ void waveform_fft(){
 
   for(int i = 0; i < n; i++)
   {
-    hfftm_rebin->SetBinContent(i, hfftm->GetBinContent(i));
+    hfftm_rebin->SetBinContent(i, hfftm->GetBinContent(i)/sqrt(n));
   }
 
   hfftm_rebin->SetTitle("Magnitude of Fast Fourier Transform;frequency [Hz]");
