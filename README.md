@@ -1,8 +1,5 @@
-# eXFlu
+# Simple FFT root macro
 
-## This is a repo of eXFlu analysis tools.
+This is a repo of analysis tools for Beta setup measurements of eXFlu sensors. There's a number of scripts (*4.C, *_differentbiases.C, *_differentruns.C) just because it was more convenient than having to edit the macro to produce the same graphs. They all fundamentally do the same thing as waveform_fft.C, which is to take a single waveform from a measurement at a certain bias point, plot a histogram of the waveform, and plot the magnitude and phase of the FFT. The default FFT library for root is FFTW; to use it, FFTW3 library should already be installed.
 
-```
-python myScript.py -i some_input
-```
-This is how you run my script, va bene?
+The magnitude of the FFT is appropriately scaled on both the x- and y-axes. The phase is pretty meaningless if you're putting in real data... if for some reason you're ever tuning a complex function to physical data, the phase could be useful. Otherwise just ignore.
